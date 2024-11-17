@@ -1,0 +1,950 @@
+/* ---------------- Global Classes ---------------- */
+
+:root {
+    --main-bg: #F7DED0;
+    --second-bg:  #FEECE2;
+    --main-color: #000000;
+    --white: #fff;
+    --highlight: #FFBE98;
+    --another-color: #E2BFB3;
+}
+
+
+html,
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: var(--main-bg);
+    color: var(--main-color);
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.container{
+    width: 80%;
+    position: absolute;
+    left: 16rem;
+    top: 5rem;
+    display: flex;
+    /* align-items: center;
+    justify-content: center;  */
+    /* margin: auto; */
+}
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.space_around{
+    justify-content: space-around;
+}
+
+.space_between{
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: var(--another-color); 
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--highlight); 
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--white); 
+}
+
+
+
+/* --------X-------- Global Classes --------X-------- */
+
+
+/* ---------------- Header ---------------- */
+
+header{
+    background-color: var(--second-bg);
+    height: 60px;
+    overflow: hidden;
+    box-shadow:  10px 10px 20px #b9aca5,
+                 -10px -10px 20px #ffffff;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.menu-btn{
+    padding: 23px 25px 0px;
+}
+.menu-btn i:hover{
+    cursor: pointer;
+}
+#menu-btn {
+    display: none;
+}
+
+.logo{
+    width: 200px;
+    overflow: hidden;
+    margin-right: 3rem;
+    padding: 5px;
+}
+.logo img{
+    width: 100%;
+}
+
+.search{
+    background: var(--main-bg);
+    width: 18rem;
+    height: 3rem;
+    margin: 0.4rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.search-icon{
+    padding: 1rem;
+    border-right: 5px solid var(--second-bg);
+}
+
+.search input{
+    width: 12rem;
+    height: 2rem;
+    padding: 1rem 3rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: var(--main-bg);
+}
+
+#menuBtn {
+    display: none;
+}
+label.barIcon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    position: absolute;
+    z-index: 9;
+    transition: 0.3s;
+    display: none;
+    right: 3rem;
+    top:1rem;
+}
+
+@media (max-width: 625px){
+    .search{
+        width: 18rem;
+        height: 3rem;
+        margin: auto;
+    }
+    .logo{
+        margin: auto;
+    }
+    label.barIcon {
+        display: block;
+    }
+} 
+
+/* --------X-------- Header --------X-------- */
+
+
+/* ---------------- Navbar ---------------- */
+
+nav{
+    position: absolute;
+    left: 0px;
+    background: var(--second-bg);
+    width: 15rem;
+    height: 100vh;
+    margin-top: 60px;
+    position: fixed;
+    z-index: 999;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+.nav-box{
+    padding: 1rem 3rem;
+    border-bottom : 2px solid var(--highlight);
+    margin:0;
+}
+.nav-box:last-child{
+    margin-bottom: 1.25rem;
+}
+
+.nav-box li{
+    padding: 0.7rem 0;
+}
+
+.nav-box li a{
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+.nav-box li a i{
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    margin:auto;
+}
+.nav-box:last-child li a i{
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.nav-bottom-text{
+    text-align: center;
+    padding: 0 1rem;
+}
+.social-icon-nav li {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+.social-icon-nav ul{
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+/* Navbar Scroll */
+nav::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  
+  /* Track */
+nav::-webkit-scrollbar-track {
+    background: var(--another-color); 
+  }
+   
+  /* Handle */
+nav::-webkit-scrollbar-thumb {
+    background: var(--highlight); 
+  }
+  
+  /* Handle on hover */
+nav::-webkit-scrollbar-thumb:hover {
+    background: var(--white); 
+}
+
+
+/* --------X-------- Navbar --------X-------- */
+
+
+/* ---------------- Middle TOP ---------------- */
+
+.middle-top {
+    position: relative;
+    padding: 0.75rem 0;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 1rem;
+    width: 100%;
+}
+.middle-top ul li{
+    padding: 0 10px;
+}
+@media (max-width: 750px){
+    .middle-top ul li{
+        padding: 10px;
+    }
+} 
+
+.middle-contact{
+    position: relative;
+    margin: 2rem 0;
+    background-color: var(--another-color);
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 1rem;
+    width: 100%;
+}
+.middle-contact p{
+    display: inline;
+}
+.middle-contact p span{
+    margin: 0 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.middle-contact p:last-child{
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+/* --------X-------- Middle TOP --------X-------- */
+
+
+/* ---------------- POST TOPBAR ---------------- */
+.post-topbar{
+    position: relative;
+    left: 0;
+    margin:2rem 0rem;
+}
+.post-topbar h1{
+    display: inline;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.line {
+    width: 40px;
+    background: var(--main-color);
+    height: 10px;
+    margin: 0.5rem 1rem;
+}
+/* --------X-------- POST TOPBAR --------X-------- */
+
+
+/* ---------------- POST ---------------- */
+.left-div{
+    width: 75%;
+}
+
+
+.wrapper-post{
+    position: relative;
+    left: 0;
+}
+
+.post {
+    width: 100%;
+    position: relative;
+    left:0;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.post .single-post{
+    background: var(--second-bg);
+    margin-bottom: 3rem;
+    width: 15rem;
+    border-radius: 1rem;
+}
+
+.post-image {
+    width: 13rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+.post-image img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.post-body{
+    width: 13rem;
+    padding: 1rem;
+}
+.post-body h3{
+    margin:10px 0;
+}
+.post-body p{
+    margin:0;
+}
+.post-wrapper{
+    flex-wrap: nowrap;
+}
+
+.load-more{
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background-color: var(--another-color);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/* --------X-------- POST--------X-------- */
+
+
+/* ---------------- PINNED POST ---------------- */
+.pinned-post {
+    background: var(--second-bg);
+}
+.pinned-body{
+    width: 57%;
+}
+.pinned-image{
+    width: 32%;
+}
+
+@media (max-width: 800px){
+    .post{
+        margin: auto;
+    }
+    .pinned-image{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .pinned-post {
+        flex-direction: column;
+        width: 25rem;
+        overflow: hidden;
+    }
+    .pinned-image {
+        width: 20rem;
+        padding: 1rem;
+        margin: auto;
+    }
+    .pinned-body{
+        width: 20rem;
+        padding: 1rem;
+    }
+} 
+
+/* --------X-------- PINNED POST --------X-------- */
+
+
+
+
+/* ---------------- PUBLISHED ---------------- */
+
+.publised {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
+.like-icon{
+    background-color: var(--another-color);
+    padding: 2px 15px;
+    border-radius: 0.25rem;
+    margin-right: 1rem !important;
+}
+.read-more{
+    color: var(--highlight);
+}
+
+/* --------X-------- PUBLISHED --------X-------- */
+
+
+/* ---------------- Popular Post ---------------- */
+
+.right-div{
+    width: 23%;
+    position: absolute;
+    right: 0%;
+    margin-top: 5rem;
+}
+
+
+.popular-post {
+    padding: 1rem;
+    background-color: var(--second-bg);
+    border-radius: 1.5rem;
+}
+
+.popular-post-single{
+    margin:0.75rem 0;
+}
+
+.popular-post-img img{
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.75rem;
+}
+.popular-post-top{
+    width: 90%;
+    margin-left: 1.75rem;
+}
+
+.popular-post-top span:first-child{
+    margin-right: 1rem;
+}
+.popular-post-head{
+    margin-top: 0.5rem;
+}
+.popular-post-head div:first-child{
+    /* margin-right: 0.5rem; */
+    width: 15%;
+}
+.popular-post-head div:last-child{
+    display: inline;
+    width: 85%;
+}
+.popular-post-head div h3{
+    display: inline;
+    font-size: 1rem;
+}
+.discription{
+    margin-left: 1.75rem;
+    font-size: 0.80rem;
+    width: 90%;
+}
+/* --------X-------- Popular Post --------X-------- */
+
+
+/* ---------------- Labels ---------------- */
+.labels{
+    background: var(--second-bg);
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.labels_single{
+    background: var(--highlight);
+    width: 5rem;
+    overflow: hidden;
+    padding: 0.5rem 0.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.labels_single p,i{
+    margin: 0;
+    display: inline;
+}
+
+.label-show{
+    color:var(--another-color);
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+@media (max-width: 1130px){
+    .labels_single{
+        width:4rem;
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 970px){
+    .labels_single{
+        margin: 1rem auto;
+        width: 6rem;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+
+/* .labels_single i{
+    padding:1rem 0;
+} */
+
+@media (max-width: 800px){
+    .right-div{
+        position: relative;
+        width: 75%;
+        margin: auto;
+    }
+    .popular-post-head div:first-child{
+        width: 6%;
+    }
+    .labels_single{
+        font-size: 1rem;
+        width: 6rem;
+    }
+}
+
+/* ---------------- Labels ---------------- */
+
+
+
+
+
+/* ---------------- Footer ---------------- */
+.footer{
+    background: var(--another-color);
+    padding:2rem 0 0 0;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    width: 96%;
+}
+
+.left-foot-top-img{
+    width: 50px;
+    margin-right: 1rem;
+}
+.left-foot-top-img img{
+    width: 100%;
+    border-radius: 5px;
+}
+.left-foot-top-text h1{
+    margin: 0;
+    padding: 0;
+}
+.left-foot-ul{
+    margin: 2rem 0;
+    padding: 0;
+}
+.left-foot-ul li span{
+    padding: 0 0.5rem;
+}
+
+.footer-general .post-topbar{
+    margin: 0;
+    padding: 0;
+}
+.footer-general .post-topbar h1{
+    font-size: 1.25rem;
+}
+
+.footer-general .post-topbar .line{
+    height: 5px;
+    width: 30px;
+}
+
+.ul-footer{
+    padding-left: 0;
+}
+.ul-footer li{
+    padding: 0.5rem;
+}
+.copyright{
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* --------X-------- Footer --------X-------- */
+
+
+
+
+/* --------X----------------X-------- HOMEPAGE DONE --------X----------------X-------- */
+
+
+
+
+/* ---------------- ALL PAGE TOP ---------------- */
+.pages-top{
+    width: 50rem;
+}
+.pages-top p{
+    font-size: 1rem;
+    width: 75%;
+}
+.pages-top span{
+    margin: 0rem 0.5rem;
+}
+.pages-top h3{
+    font-size: 1.5rem;
+}
+.welcome-msg{
+    background-color: var(--second-bg);
+    width: 10rem !important;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow:  20px 20px 60px #d8c9c0,
+             -20px -20px 60px #ffffff;
+}
+
+
+/* --------X-------- ALL PAGE TOP --------X-------- */
+
+
+
+
+/* ---------------- ABOUT PAGE ---------------- */
+.about-section{
+    width: 50%;
+    background: var(--second-bg);
+    margin: 5rem auto 3rem auto;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 2%;
+}
+
+.about-img-section{
+    width: 25%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    border-radius: 100%;
+    top: -7rem;
+    margin-bottom: -6rem;
+    border: 1rem solid var(--second-bg);
+
+    background: linear-gradient(145deg, #fffdf2, #e5d4cb);
+    box-shadow:  17px 17px 40px #b2a59e,
+             -17px -17px 40px #ffffff;
+}
+
+@media (max-width:1050px){
+    .about-img-section{
+        top:-5rem;
+        margin-bottom: -4rem;
+    }
+}
+@media (max-width:750px){
+    .about-img-section{
+        top:-4rem;
+        margin-bottom: -3rem;
+    }
+}
+@media (max-width:500px){
+    .about-img-section{
+        top:-3rem;
+        margin-bottom: -2rem;
+    }
+}
+.about-body{
+    overflow: hidden;
+}
+
+.about-img-section img{
+    width: 100%;
+}
+
+.about-button{
+    background-color: var(--another-color);
+    width: 10rem;
+    padding: 1px 0px;
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.about-button i{
+    margin-right: 1rem;
+}
+
+/* --------X----------------X-------- ABOUTPAGE DONE --------X----------------X-------- */
+
+
+
+
+/* ---------------- DONATE PAGE ---------------- */
+.donate-section{
+    width: 75%;
+    overflow: hidden;
+    margin: 3rem auto;
+    text-align: center;
+}
+.donate-section p{
+    margin: 2rem 0;
+}
+
+.donate-image{
+    margin: auto;
+    width: 50%;
+    overflow: hidden;
+    padding: 0 0 2rem;
+}
+.donate-image img{
+    width: 100%;
+}
+.donate-button p{
+    padding: 1rem;
+    margin: 2rem;
+    display: inline;
+    background-color: var(--another-color)  ;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+@media (max-width: 550px){
+    .donate-button p{
+        display: block;
+    }
+}
+
+/* --------X----------------X-------- DONATPAGE DONE --------X----------------X-------- */
+
+
+
+
+/* ---------------- CONTACT PAGE ---------------- */
+.contact-section{
+    width: 40%;
+    overflow: hidden;
+    margin: 2rem 5rem;
+}
+
+.contact-section input{
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--highlight);
+    border-radius: 0.5rem;
+    border: 2px solid var(--another-color);
+    width: 100%;
+}
+
+.contact-section textarea{
+    background-color: var(--highlight);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    resize: none;
+    height: 10rem;
+    width: 100%;
+}
+/* --------X----------------X-------- CONTACTPAGE DONE --------X----------------X-------- */
+
+
+
+
+/* ---------------- DISCLAIMER PAGE ---------------- */
+
+.disclaimer-top{
+    text-align: center;
+}
+
+.disclaimer-body{
+    width: 90%;
+    margin: 5rem 2rem;
+}
+.disclaimer-body-section{
+    width: 80%;
+    margin-left: 2rem;
+}
+.disclaimer-body-section-body {
+    margin-left: -2rem;
+}
+
+.disclaimer-body-section-body p{
+    width: 80%;
+    margin:0 1rem;
+}
+.disclaimer-body-section-body i{
+    margin: 0;
+}
+
+.disclaimer-bottom{
+    width: 75%;
+    margin-left: 4rem;
+    margin-bottom: 5rem;
+}
+/* --------X----------------X-------- DISCLAIMERPAGE DONE --------X----------------X-------- */
+
+
+/* ---------------- FAQ PAGE ---------------- */
+
+.faq-single{
+    width: 60%;
+    background-color: var(--second-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem 4rem;
+}
+.faq-single h3{
+    margin: 0px 0 0 2rem;
+}
+
+.faq-single p{
+    margin: 2rem 3rem 1rem 3rem;
+}
+
+.rotated {
+    transform: rotate(-90deg) !important;
+}
+.faq-single i{
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+/* --------X----------------X-------- FAQPAGE DONE --------X----------------X-------- */
+
+
+
+/* ---------------- POST PAGE ---------------- */
+
+.post-wrapper-all{
+    margin: 3rem auto;
+    width: 75%;
+}
+.post-top-image-group-img{
+    width: 40rem;
+}
+
+.post-top-image-group-img img{
+    width: 100%;
+    margin: auto;
+    border-radius: 1rem;
+}
+.post-top-image-group p{
+    padding: 1rem 0rem;
+}
+
+.post-group{
+    margin: 4rem 0;
+}
+
+
+.about-the-author-wrapper{
+    width: 25rem;
+    overflow: hidden;
+    background-color: var(--second-bg);
+    border-radius: 1rem;
+}
+
+.about-the-author-img{
+    width: 4rem;
+    margin:1rem;
+}
+.about-the-author-img img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.about-the-author-body{
+    width: 17rem;
+    padding: 1rem;
+}
+.about-the-author-body p{
+    margin: 0;
+}
+.about-the-author-body p:first-child{
+    margin-bottom: 1rem;
+}
+
+
+
+.share{
+    width: 40rem;
+    margin: 2rem 0;
+}
+.share-box-all{
+    width: 35rem;
+}
+
+.share-box{
+    width: 10rem;
+    background: var(--white);
+    border-radius: 1rem;
+    height: 3rem;
+}
+
+.share-box p, i{
+    margin: 0;
+    font-size: 1rem;
+    margin: auto;
+}
+.share-box i{
+    font-size: 1.25rem;
+}
+.share-box p{
+    margin-left: 0;
+}
+/* --------X----------------X-------- POSTPAGE DONE --------X----------------X-------- */
