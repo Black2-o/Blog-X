@@ -1,0 +1,1123 @@
+/* Import Google Fonts - New font choices */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+/* ---------------- Global Classes ---------------- */
+
+:root {
+  /* Light Theme (Default) */
+  --main-bg: #f8f8f8;
+  --second-bg: #ffffff;
+  --main-color: #00274d;
+  --secondary-color: #009688;
+  --white: #ffffff;
+  --text-color: #333333;
+  --another-color: #f0f0f0;
+  --card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --border-color: #e0e0e0;
+  --heading-color: #00274d;
+}
+
+.dark-theme {
+  /* Dark Theme */
+  --main-bg: #121212;
+  --second-bg: #1e1e1e;
+  --main-color: #4a8eff;
+  --secondary-color: #00b3a6;
+  --white: #ffffff;
+  --text-color: #e0e0e0;
+  --another-color: #2a2a2a;
+  --card-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  --border-color: #333333;
+  --heading-color: #7ab5ff; /* Lighter blue for better contrast in dark mode */
+}
+.bg-dark{
+  background-color: #121212;
+}
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: var(--main-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+.container {
+  width: 80%;
+  position: absolute;
+  left: 16rem;
+  top: 5rem;
+  display: flex;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.space_around {
+  justify-content: space-around;
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--another-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+/* --------X-------- Global Classes --------X-------- */
+
+/* ---------------- Header ---------------- */
+
+header {
+  background-color: var(--second-bg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-btn {
+  padding: 23px 25px 0px;
+}
+.menu-btn i:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+#menu-btn {
+  display: none;
+}
+
+.logo {
+  width: 200px;
+  overflow: hidden;
+  margin-right: 3rem;
+  padding: 5px;
+}
+.logo img {
+  width: 100%;
+}
+
+.search {
+  background: var(--another-color);
+  width: 18rem;
+  height: 3rem;
+  margin: 0.4rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon {
+  padding: 1rem;
+  border-right: 5px solid var(--second-bg);
+  color: var(--main-color);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.search input {
+  background-color: var(--another-color);
+  color: var(--text-color);
+  width: 12rem;
+  height: 2rem;
+  padding: 1rem 3rem;
+  margin: 0.5rem;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menuBtn {
+  display: none;
+}
+label.barIcon {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  cursor: pointer;
+  position: absolute;
+  z-index: 9;
+  transition: color 0.3s ease;
+  display: none;
+  right: 3rem;
+  top: 1rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  margin-left: auto;
+  margin-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  background-color: var(--another-color);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.theme-toggle-btn i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 625px) {
+  .search {
+    width: 18rem;
+    height: 3rem;
+    margin: auto;
+  }
+  .logo {
+    margin: auto;
+  }
+  label.barIcon {
+    display: block;
+  }
+  .theme-toggle {
+    position: absolute;
+    right: 6rem;
+    top: 1rem;
+  }
+}
+
+/* --------X-------- Header --------X-------- */
+
+/* ---------------- Navbar ---------------- */
+
+nav {
+  background: var(--second-bg);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 0px;
+  width: 15rem;
+  height: 100vh;
+  margin-top: 60px;
+  position: fixed;
+  z-index: 999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-box {
+  border-bottom: 2px solid var(--secondary-color);
+  padding: 1rem 3rem;
+  margin: 0;
+  transition: border-color 0.3s ease;
+}
+.nav-box:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.nav-box li {
+  padding: 0.7rem 0;
+}
+
+.nav-box li a {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+.nav-box li a i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  margin: auto;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.nav-box:last-child li a i {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.nav-bottom-text {
+  text-align: center;
+  padding: 0 1rem;
+}
+.social-icon-nav li {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.social-icon-nav ul {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+/* Navbar Scroll */
+nav::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+nav::-webkit-scrollbar-track {
+  background: var(--another-color);
+}
+
+/* Handle */
+nav::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* Handle on hover */
+nav::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+/* --------X-------- Navbar --------X-------- */
+
+/* ---------------- Middle TOP ---------------- */
+
+.middle-top {
+  background-color: var(--another-color);
+  color: var(--main-color);
+  position: relative;
+  padding: 0.75rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.middle-top ul li {
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+@media (max-width: 750px) {
+  .middle-top ul li {
+    padding: 10px;
+  }
+}
+
+.middle-contact {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  position: relative;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.middle-contact p {
+  display: inline;
+}
+.middle-contact p span {
+  margin: 0 2rem;
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.middle-contact p:last-child {
+  background-color: var(--white);
+  color: var(--main-color);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* --------X-------- Middle TOP --------X-------- */
+
+/* ---------------- POST TOPBAR ---------------- */
+.post-topbar {
+  position: relative;
+  left: 0;
+  margin: 2rem 0rem;
+}
+.post-topbar h1 {
+  display: inline;
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+.line {
+  width: 40px;
+  background: var(--secondary-color);
+  height: 10px;
+  margin: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+/* --------X-------- POST TOPBAR --------X-------- */
+
+/* ---------------- POST ---------------- */
+.left-div {
+  width: 75%;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.wrapper-post {
+  position: relative;
+  left: 0;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.post {
+  width: 100%;
+  position: relative;
+  left: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.post .single-post {
+  background: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 3rem;
+  width: 15rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-image {
+  width: 13rem;
+  overflow: hidden;
+  padding: 1rem;
+}
+.post-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.post-body {
+  width: 13rem;
+  padding: 1rem;
+  text-align: left;
+}
+.post-body h3 {
+  margin: 10px 0;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+.post-body span {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.post-body p {
+  margin: 0;
+  line-height: 1.5;
+}
+.post-wrapper {
+  flex-wrap: nowrap;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.load-more {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  margin: 3rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* --------X-------- POST--------X-------- */
+
+/* ---------------- PINNED POST ---------------- */
+.pinned-post {
+  background: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.pinned-body {
+  width: 57%;
+  text-align: left;
+}
+.pinned-image {
+  width: 32%;
+}
+
+@media (max-width: 800px) {
+  .post {
+    margin: auto;
+  }
+  .pinned-image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .pinned-post {
+    flex-direction: column;
+    width: 25rem;
+    overflow: hidden;
+  }
+  .pinned-image {
+    width: 20rem;
+    padding: 1rem;
+    margin: auto;
+  }
+  .pinned-body {
+    width: 20rem;
+    padding: 1rem;
+  }
+}
+
+/* --------X-------- PINNED POST --------X-------- */
+
+/* ---------------- PUBLISHED ---------------- */
+
+.publised {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+.like-icon {
+  background-color: var(--another-color);
+  padding: 2px 15px;
+  border-radius: 0.25rem;
+  margin-right: 1rem !important;
+  transition: background-color 0.3s ease;
+}
+.read-more {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+/* --------X-------- PUBLISHED --------X-------- */
+
+/* ---------------- Popular Post ---------------- */
+
+.right-div {
+  width: 23%;
+  position: absolute;
+  right: 0%;
+  margin-top: 5rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.popular-post {
+  background-color: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popular-post-single {
+  margin: 0.75rem 0;
+  text-align: left;
+}
+
+.popular-post-img img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+.popular-post-top {
+  width: 90%;
+  margin-left: 1.75rem;
+  text-align: left;
+}
+
+.popular-post-top span:first-child {
+  margin-right: 1rem;
+}
+.popular-post-top span:last-child {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.popular-post-head {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.popular-post-head div:first-child {
+  /* margin-right: 0.5rem; */
+  width: 15%;
+}
+.popular-post-head div:first-child h3 {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.popular-post-head div:last-child {
+  display: inline;
+  width: 85%;
+}
+.popular-post-head div:last-child h3 {
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+.popular-post-head div h3 {
+  display: inline;
+  font-size: 1rem;
+}
+.discription {
+  margin-left: 1.75rem;
+  font-size: 0.80rem;
+  width: 90%;
+  text-align: left;
+  line-height: 1.5;
+}
+/* --------X-------- Popular Post --------X-------- */
+
+/* ---------------- Labels ---------------- */
+.labels {
+  background: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.labels_single {
+  background: var(--secondary-color);
+  width: 5rem;
+  overflow: hidden;
+  padding: 0.5rem 0.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--white);
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.labels_single p,
+i {
+  margin: 0;
+  display: inline;
+}
+
+.label-show {
+  color: var(--main-color);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+@media (max-width: 1130px) {
+  .labels_single {
+    width: 4rem;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 970px) {
+  .labels_single {
+    margin: 1rem auto;
+    width: 6rem;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* .labels_single i{
+    padding:1rem 0;
+} */
+
+@media (max-width: 800px) {
+  .right-div {
+    position: relative;
+    width: 75%;
+    margin: auto;
+  }
+  .popular-post-head div:first-child {
+    width: 6%;
+  }
+  .labels_single {
+    font-size: 1rem;
+    width: 6rem;
+  }
+}
+
+/* ---------------- Labels ---------------- */
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background: var(--second-bg);
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem 0 0 0;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  width: 96%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-foot-top-img {
+  width: 50px;
+  margin-right: 1rem;
+}
+.left-foot-top-img img {
+  width: 100%;
+  border-radius: 5px;
+}
+.left-foot-top-text h1 {
+  margin: 0;
+  padding: 0;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+.left-foot-ul {
+  margin: 2rem 0;
+  padding: 0;
+}
+.left-foot-ul li {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.left-foot-ul li span {
+  padding: 0 0.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.footer-general .post-topbar {
+  margin: 0;
+  padding: 0;
+}
+.footer-general .post-topbar h1 {
+  font-size: 1.25rem;
+}
+
+.footer-general .post-topbar .line {
+  height: 5px;
+  width: 30px;
+}
+
+.ul-footer {
+  padding-left: 0;
+}
+.ul-footer li {
+  padding: 0.5rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.copyright {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --------X-------- Footer --------X-------- */
+
+/* --------X----------------X-------- HOMEPAGE DONE --------X----------------X-------- */
+
+/* ---------------- ALL PAGE TOP ---------------- */
+.pages-top {
+  width: 50rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.pages-top p {
+  font-size: 1rem;
+  width: 75%;
+}
+.pages-top span {
+  margin: 0rem 0.5rem;
+}
+.pages-top h3 {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+.welcome-msg {
+  background-color: var(--second-bg);
+  width: 10rem !important;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --------X-------- ALL PAGE TOP --------X-------- */
+
+/* ---------------- ABOUT PAGE ---------------- */
+.about-section {
+  background: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  width: 50%;
+  margin: 5rem auto 3rem auto;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-img-section {
+  border: 1rem solid var(--second-bg);
+  background: linear-gradient(145deg, var(--second-bg), var(--another-color));
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.1);
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border-radius: 100%;
+  top: -7rem;
+  margin-bottom: -6rem;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1050px) {
+  .about-img-section {
+    top: -5rem;
+    margin-bottom: -4rem;
+  }
+}
+@media (max-width: 750px) {
+  .about-img-section {
+    top: -4rem;
+    margin-bottom: -3rem;
+  }
+}
+@media (max-width: 500px) {
+  .about-img-section {
+    top: -3rem;
+    margin-bottom: -2rem;
+  }
+}
+.about-body {
+  overflow: hidden;
+  background-color: var(--second-bg);
+  transition: background-color 0.3s ease;
+}
+
+.about-img-section img {
+  width: 100%;
+}
+
+.about-button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  width: 10rem;
+  padding: 1px 0px;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.about-button i {
+  margin-right: 1rem;
+}
+
+/* --------X----------------X-------- ABOUTPAGE DONE --------X----------------X-------- */
+
+/* ---------------- DONATE PAGE ---------------- */
+.donate-section {
+  width: 75%;
+  overflow: hidden;
+  margin: 3rem auto;
+  text-align: center;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.donate-section p {
+  margin: 2rem 0;
+}
+
+.donate-image {
+  margin: auto;
+  width: 50%;
+  overflow: hidden;
+  padding: 0 0 2rem;
+}
+.donate-image img {
+  width: 100%;
+}
+.donate-button p {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1rem;
+  margin: 2rem;
+  display: inline;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 550px) {
+  .donate-button p {
+    display: block;
+  }
+}
+
+/* --------X----------------X-------- DONATPAGE DONE --------X----------------X-------- */
+
+/* ---------------- CONTACT PAGE ---------------- */
+.contact-section {
+  width: 40%;
+  overflow: hidden;
+  margin: 2rem 5rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.contact-section input {
+  background-color: var(--another-color);
+  border: 2px solid var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-section textarea {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: none;
+  height: 10rem;
+  width: 100%;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+/* --------X----------------X-------- CONTACTPAGE DONE --------X----------------X-------- */
+
+/* ---------------- DISCLAIMER PAGE ---------------- */
+
+.disclaimer-top {
+  text-align: center;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.disclaimer-body {
+  width: 90%;
+  margin: 5rem 2rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.disclaimer-body-section {
+  width: 80%;
+  margin-left: 2rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.disclaimer-body-section-body {
+  margin-left: -2rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.disclaimer-body-section-body p {
+  width: 80%;
+  margin: 0 1rem;
+}
+.disclaimer-body-section-body i {
+  margin: 0;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.disclaimer-bottom {
+  width: 75%;
+  margin-left: 4rem;
+  margin-bottom: 5rem;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+/* --------X----------------X-------- DISCLAIMERPAGE DONE --------X----------------X-------- */
+
+/* ---------------- FAQ PAGE ---------------- */
+
+.faq-single {
+  background-color: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  width: 60%;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 1rem 4rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-single h3 {
+  margin: 0px 0 0 2rem;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+.faq-single p {
+  margin: 2rem 3rem 1rem 3rem;
+  line-height: 1.6;
+}
+
+.rotated {
+  transform: rotate(-90deg) !important;
+}
+.faq-single i {
+  cursor: pointer;
+  transform: rotate(180deg);
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+/* --------X----------------X-------- FAQPAGE DONE --------X----------------X-------- */
+
+/* ---------------- POST PAGE ---------------- */
+
+.post-wrapper-all {
+  margin: 3rem auto;
+  width: 75%;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.post-top-image-group-img {
+  width: 40rem;
+}
+
+.post-top-image-group-img img {
+  width: 100%;
+  margin: auto;
+  border-radius: 1rem;
+}
+.post-top-image-group p {
+  padding: 1rem 0rem;
+  line-height: 1.6;
+}
+
+.post-group {
+  margin: 4rem 0;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+
+.about-the-author-wrapper {
+  background-color: var(--second-bg);
+  box-shadow: var(--card-shadow);
+  width: 25rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-the-author-img {
+  width: 4rem;
+  margin: 1rem;
+}
+.about-the-author-img img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.about-the-author-body {
+  width: 17rem;
+  padding: 1rem;
+  text-align: left;
+}
+.about-the-author-body p {
+  margin: 0;
+  line-height: 1.5;
+}
+.about-the-author-body p:first-child {
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.share {
+  width: 40rem;
+  margin: 2rem 0;
+  background-color: var(--main-bg);
+  transition: background-color 0.3s ease;
+}
+.share-box-all {
+  width: 35rem;
+}
+
+.share-box {
+  background: var(--another-color);
+  color: var(--main-color);
+  width: 10rem;
+  border-radius: 1rem;
+  height: 3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.share-box p,
+i {
+  margin: 0;
+  font-size: 1rem;
+  margin: auto;
+}
+.share-box i {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+.share-box p {
+  margin-left: 0;
+}
+/* --------X----------------X-------- POSTPAGE DONE --------X----------------X-------- */
+

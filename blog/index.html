@@ -1,0 +1,455 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogX</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="Images/BlogX.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="flex-row">
+        <div class="menu-btn">
+            <input type="checkbox" id="menu-btn" name="">
+            <label for="menu-btn" class="menu-icon">
+                <i class="fa-solid fa-angle-left"></i>
+            </label>
+        </div>
+
+
+        <div class="logo">
+    <img src="Images/logo.png" alt="BlogLogo">
+</div>
+        <div class="search flex-row">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" placeholder="Find Your Blog">
+        </div>
+
+        <div class="theme-toggle">
+            <button class="theme-toggle-btn" id="themeToggle">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+       
+    <div class="header-btn">
+        <input type="checkbox" id="menuBtn" name="">
+        <label for="menuBtn" class="barIcon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </div>
+
+    </header>
+
+    <nav>
+        <div class="nav-top">
+            <ul class="nav-box">
+                <li class="nav-single">
+                    <a href="index.html"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                </li>
+            </ul>
+            <ul class="nav-box flex-column">
+                <li class="nav-single">
+                   <a href="about.html"> <i class="fa-solid fa-person-shelter"></i> <span>About</span></a>
+                </li>
+                <li class="nav-single">
+                   <a href="donate.html" ><i class="fa-regular fa-calendar"></i> <span>Donate</span></a>
+                </li>
+                <li class="nav-single">
+                  <a href="contact.html">  <i class="fa-regular fa-address-book"></i> <span>Contact</span></a>
+                </li>
+            </ul>
+            <ul class="nav-box">
+                <li class="nav-single">
+                  <a href="contact.html">  <i class="fa-regular fa-square-check"></i> <span>Request</span></a>
+                </li>
+            </ul>
+            <ul class="nav-box flex-column">
+                <li class="nav-single">
+                  <a href="disclaimar.html">  <i class="fa-solid fa-triangle-exclamation"></i> <span>Disclaimar</span></a>
+                </li>
+                <li class="nav-single">
+                  <a href="#"> <i class="fa-solid fa-lock"></i><span>Privacy Policy</span></a>
+                </li>
+                <li class="nav-single">
+                   <a href="#"> <i class="fa-regular fa-square-check"></i><span>Terms of Use</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-bottom">
+            <div class="nav-bottom-text">
+                <span>Sitemap.</span>
+                <span>Disclaimer.</span>
+                <span>Privacy Policy.</span>
+            </div>
+            <div class="social-icon-nav">
+                <ul class="flex-row">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-x-twitter"></i></li>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <div class="container flex-column">
+       <div class="middle-top">
+        <ul class="flex-row space_around">
+            <li>Economics</li>
+            <li>Investments</li>
+            <li>Homeownership</li>
+            <li>Buying Home</li>
+            <li>Selling Home</li>
+            <li>Local market</li>
+        </ul>
+       </div>
+       <div class="middle-contact">
+            <p>Have Any Questions?<span>Contact Us</span></p><p>Subscribe Now</p>
+        </div>
+        <div class="left-right-wrapper flex-row">
+            <div class="post-wrapper flex-column left-div">
+                <div class="post-wrapper flex-column">
+                    <div class="post-topbar flex-row">
+                        <h1>Pinned Post</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="post pinned-post flex-row space_around">
+                        <div class="post-image pinned-image">
+    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Forest">
+</div>
+                        <div class="post-body pinned-body">
+                            <span>In Economics</span>
+                            <h3>Top 10 Emerging Real Estate Markets to Watch in 2024</h3>
+                            <p>Welcome to the future of real estate! As we step into 2024, the landscape of real estate markets is evolving faster than ever before. But what makes…</p>
+                            <div class="publised flex-row space_between">
+                                <div class="space_around flex-row">
+                                    <p class="like-icon">Published</p>
+                                    <p class="date-time">Mar 4, 2024</p>
+                                </div>
+                                <p class="read-more">Read more</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="post-wrapper flex-column">
+                    <div class="post-topbar flex-row">
+                        <h1>Latest Post</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="post flex-row space_around">
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Real Estate">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Flipping or Holding? Exploring Different Investment Strategies in Real Estate</h3>
+                                <p>Introduce: In the ever-evolving landscape of real estate investment, t..</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Home">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Navigating the Real Estate Maze: A Crash Course for First-Time Homebuyers</h3>
+                                <p>Real Estate  Introduction to the Real Estate Market Purchasing a home is a</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="House">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Insights from Real Estate Experts: Predictions for the Market's Future</h3>
+                                <p>Real Estate Experts: Predictions Introduction to the real estate market</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Real Estate">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Flipping or Holding? Exploring Different Investment Strategies in Real Estate</h3>
+                                <p>Introduce: In the ever-evolving landscape of real estate investment, t..</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Home">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Navigating the Real Estate Maze: A Crash Course for First-Time Homebuyers</h3>
+                                <p>Real Estate  Introduction to the Real Estate Market Purchasing a home is a</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-post">
+                            <div class="post-image">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="House">
+</div>
+                            <div class="post-body">
+                                <span>In Economics</span>
+                                <h3>Insights from Real Estate Experts: Predictions for the Market's Future</h3>
+                                <p>Real Estate Experts: Predictions Introduction to the real estate market makes…</p>
+                                <div class="publised flex-row space_between">
+                                    <div class="space_around flex-row">
+                                        <p class="like-icon">Published</p>
+                                        <p class="date-time">Mar 4, 2024</p>
+                                    </div>
+                                    <p class="read-more">Read more</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="load-more">
+                        <span>Load More Posts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right-div">
+                <div class="popular-post">
+                    <div class="post-topbar flex-row">
+                        <h1>Popular Post</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="popular-post-img">
+    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Science">
+</div>    
+                    <div class="popular-post-body flex-column">
+                        <div class="popular-post-single">
+                            <div class="popular-post-top flex-row">
+                                <span>Oct 16....</span>
+                                <span>in Economics</span>
+                            </div>
+                            <div class="popular-post-head flex-row">
+                                <div><h3>01</h3></div>
+                                <div><h3>How to Create a Budget for Your Home Real Estate</h3></div>
+                            </div>
+
+                            <p class="discription">Real Estate Introduce:  Creating a budget for your house, whether for....</p>
+                        </div>
+                        <div class="popular-post-single">
+                            <div class="popular-post-top flex-row">
+                                <span>Mar 04....</span>
+                                <span>in Economics</span>
+                            </div>
+                            <div class="popular-post-head flex-row">
+                                <div><h3>02</h3></div>
+                                <div><h3>Top 10 Emerging Real Estate Markets to Watch in 2024</h3></div>
+                            </div>
+                        </div>
+                        <div class="popular-post-single">
+                            <div class="popular-post-top flex-row">
+                                <span>Oct 16....</span>
+                                <span>in Economics</span>
+                            </div>
+                            <div class="popular-post-head flex-row">
+                                <div><h3>03</h3></div>
+                                <div><h3>Why real estate is a bad investment in 2023?</h3></div>
+                            </div>
+                        </div>
+                        <div class="popular-post-single">
+                            <div class="popular-post-top flex-row">
+                                <span>Oct 16....</span>
+                                <span>in Economics</span>
+                            </div>
+                            <div class="popular-post-head flex-row">
+                                <div><h3>04</h3></div>
+                                <div><h3>How to Create a Budget for Your Home Real Estate</h3></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="labels">
+                    <div class="post-topbar flex-row">
+                        <h1>Labels</h1>
+                        <div class="line"></div>
+                    </div>
+                    <div class="labels_all flex-row space_between">
+                        <div class="labels_single flex-row space_between">
+                            <p>Buying Ho..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between">
+                            <p>Investmen..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between">
+                            <p>Home Imp..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between">
+                            <p>Homeown..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between hidden">
+                            <p>Economics</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between hidden">
+                            <p>Premium T..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between hidden">
+                            <p>Scams</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="labels_single flex-row space_between hidden">
+                            <p>Selling Ho..</p>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <p class="label-show">Show More.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-wrapper flex-row space_around">
+                <div class="left-footer">
+                    <div class="left-foot-top flex-row">
+                        <div class="left-foot-top-img">
+    <img src="https://placehold.co/50x50/009688/ffffff?text=MV" alt="Logo">
+</div>
+                        <div class="left-foot-top-text">
+                            <h1>MedVisual™</h1>
+                            <p>Unleashing the Power of Technology.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="left-foot-ul flex-row">
+                        <li>Facebook<span>/</span> </li>
+                        <li>Instagram<span>/</span> </li>
+                        <li>Twitter<span>/</span> </li>
+                        <li>Youtube<span>/</span> </li>
+                        <li>Telegram</li>
+                    </ul>
+                </div>
+                <div class="footer-general">
+                    <div class="post-topbar flex-row">
+                        <h1>About Us</h1>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="ul-footer">
+                        <li>-FAQ</li>
+                        <li>-ABOUT</li>
+                        <li>-DEV ABOUT</li>
+                    </ul>
+                </div>
+                <div class="footer-general">
+                    <div class="post-topbar flex-row">
+                        <h1>Policy & Terms</h1>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="ul-footer">
+                        <li>Disclaimer</li>
+                        <li>Terms of Use</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-general">
+                    <div class="post-topbar flex-row">
+                        <h1>Support</h1>
+                        <div class="line"></div>
+                    </div>
+                    <ul class="ul-footer">
+                        <li>-Donate</li>
+                        <li>-Contact</li>
+                        <li>-Community</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 . Black 2.o <img src="Images/correct.svg" alt="correct">. All rights reserved</p>
+            </div>
+        </div>
+    </div>
+
+    <!--  Font Awesome Kit Added -->
+    <script src="https://kit.fontawesome.com/2f363fc945.js" crossorigin="anonymous"></script>
+    <!--  JS ADDED Added -->
+    <script src="js/script.js"></script>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('i');
+            
+            // Check if user has previously selected a theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.documentElement.classList.toggle("bg-dark");
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                // Toggle dark theme class on body
+                document.body.classList.toggle('dark-theme');
+                document.documentElement.classList.toggle("bg-dark");
+                
+                // Toggle icon
+                if (document.body.classList.contains('dark-theme')) {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
